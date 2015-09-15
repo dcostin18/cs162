@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- lib.rng -->
+<element name='library' xmlns="http://relaxng.org/ns/structure/1.0">
+	<attribute name="name"/>
+	<element name="books">
+		<zeroOrMore>
+			<element name="book">
+				<attribute name="id"/>
+				<zeroOrMore>
+					<element name="title">
+						<text/>
+					</element>
+				</zeroOrMore>
+				<zeroOrMore>
+					<element name="author">
+						<text/>
+					</element>
+				</zeroOrMore>
+				<zeroOrMore>
+				<zeroOrMore>
+					<element name="editor">
+						<text/>
+					</element>
+				</zeroOrMore>
+					<element name="publisher">
+						<text/>
+					</element>
+				</zeroOrMore>
+				<zeroOrMore>
+					<element name="year">
+						<text/>
+					</element>
+				</zeroOrMore>
+			</element>
+		</zeroOrMore>
+	</element>
+	<element name="movies">
+		<zeroOrMore>
+			<element name="movie">
+				<attribute name="id"/>
+				<zeroOrMore>
+					<attribute name="oscarwinner">
+						<choice>
+							<value>yes</value>
+							<value>no</value>
+						</choice>
+					</attribute>
+				</zeroOrMore>
+				<zeroOrMore>
+					<element name="title">
+						<text/>
+					</element>
+				</zeroOrMore>
+				<zeroOrMore>
+					<element name="director">
+						<text/>
+					</element>
+				</zeroOrMore>
+				<zeroOrMore>
+					<element name="year">
+						<text/>
+					</element>
+				</zeroOrMore>
+			</element>
+		</zeroOrMore>
+	</element>
+	<element name="music">
+		<zeroOrMore>
+			<element name="album">
+				<attribute name="id"/>
+				<zeroOrMore>
+					<element name="title">
+						<text/>
+					</element>
+				</zeroOrMore>
+				<zeroOrMore>
+					<element name="artist">
+						<text/>
+					</element>
+				</zeroOrMore>
+				<zeroOrMore>
+					<element name="year">
+						<text/>
+					</element>
+				</zeroOrMore>
+			</element>
+		</zeroOrMore>
+	</element>
+</element>

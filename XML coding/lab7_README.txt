@@ -1,0 +1,2 @@
+The first part of this lab involved writing a Relax NG Schema by looking at XML files that are valid and invalid.
+The second part developed a piece of software using XML for information storage and processing.

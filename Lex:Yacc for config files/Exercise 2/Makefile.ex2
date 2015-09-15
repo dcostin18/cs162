@@ -1,0 +1,23 @@
+CFLAGS= -std=c11
+LEX=flex
+YACC=bison
+YFLAGS= -d
+
+SRC=parse.c tokenize.c
+
+configfile: configfile.o tokens.o parse.tab.o
+
+configfile.o: configfile.[ch] 
+
+parse.tab.o: parse.tab.c
+parse.tab.c parse.tab.h: parse.y
+	${YACC.y} parse.y
+
+tokens.o: tokens.c parse.tab.h
+tokens.c: tokens.l
+
+depend: parse.tab.c
+	makedepend ${SRC} -Y >& /dev/null
+
+clean:
+	rm -f *.o tokens.c parse.tab.[ch] configfile

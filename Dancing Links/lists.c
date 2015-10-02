@@ -149,9 +149,7 @@ void printnode(ListNode* node)
 
 int main(int argc, char** argv)
 {
-	printf("CHECKPOINT 0");
 	ListNode* list = ListNode_create(5, NULL, NULL, NULL);
-	printf("Checkpoint 2");
 	printnode(list);
 	return 0;
 }
